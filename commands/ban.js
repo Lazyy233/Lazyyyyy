@@ -5,9 +5,7 @@ const Discord = module.require('discord.js');
 module.exports.run = async (bot, message, args) => {
 if(!message.content.startsWith(prefix))return;
   
-  if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply("Sorry, you don't have permissions to use this!");
-
-let member = message.mentions.members.first();
+ let member = message.mentions.members.first();
 if(!member)
   return message.reply("Please mention a valid member of this server");
 if(!member.bannable) 
