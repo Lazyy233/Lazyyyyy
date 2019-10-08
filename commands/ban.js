@@ -16,7 +16,6 @@ if(!reason) reason = "No reason provided";
 
 await member.ban(reason)
   .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
-message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
   message.member.tag.sendMessage('Hi! You were banned from ${member.user.server} because: {reason}. If you do not get why you were banned, please DM @Lazyy#9825.')
   }
   
